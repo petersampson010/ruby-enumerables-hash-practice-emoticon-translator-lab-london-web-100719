@@ -11,15 +11,8 @@ def load_library(file)
   return emoticons
 end
 
-def get_japanese_emoticon(file = './lib/emoticons.yml', e_emoticon)
+def get_japanese_emoticon(file, e_emoticon)
   new_file = load_library(file)
-  new_file[:get_emoticon].each do |array|
-    if e_emoticon === array[0]
-      return array[1]
-    else 
-      return "Sorry, that emoticon was not found"
-    end
-  end 
 end 
   
   #if new_file[:get_emoticon].include?(emoticon)
