@@ -16,10 +16,9 @@ def get_japanese_emoticon(file, e_emoticon)
   new_file["get_emoticon"].each do |pair|
     if pair[0] === e_emoticon
       return pair[1]
-    else 
-      "Sorry, that emoticon was not found"
     end 
   end 
+  return "Sorry, that emoticon was not found"
 end 
   
   #if new_file[:get_emoticon].include?(emoticon)
