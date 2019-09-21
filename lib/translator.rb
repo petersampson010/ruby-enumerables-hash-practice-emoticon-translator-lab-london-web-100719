@@ -13,9 +13,9 @@ end
 
 def get_japanese_emoticon(file, e_emoticon)
   new_file = load_library(file)
-  new_file["get_emoticon"].each do |ejarray|
-    if ejarray[0] === e_emoticon
-      return ejarray[1]
+  new_file["get_emoticon"].each do |e_emot, j_emot_array|
+    if e_emot === e_emoticon
+      return j_emot_array
     else 
       return "Sorry, that emoticon was not found"
     end 
