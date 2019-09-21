@@ -20,15 +20,17 @@ def get_japanese_emoticon(file, e_emoticon)
   end 
   return "Sorry, that emoticon was not found"
 end 
-  
-  #if new_file[:get_emoticon].include?(emoticon)
-   # return new_file[:get_emoticon][emoticon]
-  #else 
-   # return "Sorry, that emoticon was not found"
-  #end 
-#end 
 
-
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file, j_emoticon)
+  new_file = load_library(file)
+  new_file["get_meaning"].each do |pair|
+    if pair[0] === j_emoticon
+      return pair[1]
+    end 
+  end 
+  return "Sorry, that emoticon was not found"
 end
+
+
+
+
